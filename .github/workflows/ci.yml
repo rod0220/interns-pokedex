@@ -37,7 +37,7 @@ jobs:
           # Validate Umindanao Email format: <initial>.<lastname>.<6-digit-id>@umindanao.edu.ph
           EMAIL_REGEX='^[a-zA-Z]\.[a-zA-Z]+\.[0-9]{6}@umindanao\.edu\.ph$'
           if ! echo "$UMINDANAO_EMAIL" | grep -qE "$EMAIL_REGEX"; then
-            echo "::error::Invalid Umindanao Email format. Expected format: <initial of firstname>.<lastname>.<6 digit id>@umindanao.edu.ph (e.g., j.delacruz.123456@umindanao.edu.ph)"
+            echo "::error::Invalid Umindanao Email format. Expected format: <initial of firstname>.<lastname>.<6 digit id number>@umindanao.edu.ph (e.g., j.delacruz.123456@umindanao.edu.ph)"
             exit 1
           fi
           
